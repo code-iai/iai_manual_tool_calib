@@ -1,0 +1,9 @@
+<launch>
+    <arg name="frame_id" />
+    <arg name="mesh_resource" />
+
+    <node pkg="iai_manual_tool_calib" type="tool_calib.py" name="tool_calib" output="screen" >
+        <param name="frame_id" value="$(arg frame_id)" />
+        <param name="mesh_resource" value="$(arg mesh_resource)" />
+    </node>
+</launch>

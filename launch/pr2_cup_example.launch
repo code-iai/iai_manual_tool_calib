@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find iai_manual_tool_calib)/launch/tool_calib.launch" >
+        <arg name="frame_id" value="l_gripper_tool_frame" />
+        <arg name="mesh_resource" value="package://iai_manual_tool_calib/meshes/cup_eco_orange.dae" />
+    </include>
+</launch>
