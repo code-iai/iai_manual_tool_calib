@@ -14,6 +14,7 @@ class ToolCalib(object):
 
         self.frame_id = rospy.get_param("~frame_id")
         self.mesh_resource = rospy.get_param("~mesh_resource")
+        self.scale = rospy.get_param("~marker_scale")
 
         self.server = InteractiveMarkerServer("tool_calib")
         self.server.insert(self.create_6dof_marker(), self.marker_callback)
@@ -28,7 +29,7 @@ class ToolCalib(object):
         self.tool_marker.action = Marker.ADD
         self.tool_marker.type = Marker.MESH_RESOURCE
         self.tool_marker.color = ColorRGBA(1.0, 1.0, 1.0, 1.0)
-        self.tool_marker.scale = Vector3(1.0, 1.0, 1.0)
+        self.tool_marker.scale = Vector3(self.scale, self.scale, self.scale)
         self.tool_marker.frame_locked = True
         self.tool_marker.mesh_resource = self.mesh_resource
         self.tool_marker.mesh_use_embedded_materials = True

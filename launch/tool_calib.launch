@@ -1,9 +1,15 @@
 <launch>
     <arg name="frame_id" />
     <arg name="mesh_resource" />
+    <arg name="marker_scale" default="1.0" />
 
     <node pkg="iai_manual_tool_calib" type="tool_calib.py" name="tool_calib" output="screen" >
         <param name="frame_id" value="$(arg frame_id)" />
         <param name="mesh_resource" value="$(arg mesh_resource)" />
+        <param name="marker_scale" value="$(arg marker_scale)" />
     </node>
+
+    <node pkg="rviz" type="rviz" name="rviz"
+          args="-d $(find iai_manual_tool_calib)/config/tool_config.rviz" />
+
 </launch>
