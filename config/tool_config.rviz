@@ -6,6 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /InteractiveMarkers1
+        - /Marker1
+        - /Marker1/Namespaces1
       Splitter Ratio: 0.566860437
     Tree Height: 463
   - Class: rviz/Selection
@@ -517,6 +520,23 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: /tool_calib/update
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /visualization_marker
+      Name: Marker
+      Namespaces:
+        tool_marker: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -541,25 +561,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.65711689
+      Distance: 0.892008781
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.822801173
-        Y: 0.148677096
-        Z: 0.879169524
+        X: 0.349120706
+        Y: 0.461160421
+        Z: 0.722268403
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.700204372
+      Pitch: 0.34520483
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.99541426
+      Yaw: 1.08722973
     Saved: ~
 Window Geometry:
   Displays:
